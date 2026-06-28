@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dosing Table</title>
+    <style>
+        html, body {
+            min-height: 100%;
+            min-width: 100%;
+            background-color:white;
+            font-family: Arial;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 40px;
+        }
+
+        .spreadsheet-container {
+            min-width: 100%;
+            background: rgb(241, 241, 241);
+            overflow-x: auto;
+            overflow-y: auto;
+            border: 1px solid rgb(245, 245, 245);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 10px;
+            color: black;
+            line-height: 1.5;
+            padding: 10px;
+        
+        }
+
+        th {
+            display: table-cell;
+            background-color: rgb(214, 214, 214);
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            border: 1px solid rgb(125, 125, 125);
+            padding: 20px 20px;
+            vertical-align: middle;
+            width: 100%;
+            font-size: 10px;
+        }
+
+        th[scope="row"] {
+            background-color: rgba(236, 236, 236);
+            font-weight: normal;
+        }
+
+        td {
+            border: 1px solid rgba(125, 125, 125);
+            padding: 6px 8px;
+            vertical-align: middle;
+            text-align: center;
+            background-color: rgba(245, 245, 245);
+        }
+
+        /* Hyperlinks */
+        .source-link {
+            color: rgba(5, 99, 193);
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        /* Info description in parentheses */
+        .sub-text {
+            font-size: 6px;
+            color: black;
+            display: block;
+            margin-top: 3px;
+        }
+        /* Importance coloring */
+        .highlight-word {
+            color: rgba(192, 0, 0);
+        }
+
+        /* Merged Cells */
+        .inner-table {
+            height: 100%;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .inner-table td {
+            border: none ;
+            vertical-align: middle;
+            text-align: center;
+            padding: 8px;
+        }
+
+
+        /* Missing Data !!!!!!!! */
+        
+    </style>
+
+</head>
+<body>
+    <div class="spreadsheet-container">
+        <table>
+            <!-- Untitrated -->
+            <thead>
+            <tr>
+                <th>Source</th>
+                <th>Methodology</th>
+                <th colspan="2">Number of participants</th>
+                <th>Ester</th>
+                <th>Administration</th>
+                <th rowspan="2">Regimen</th>
+                <th>Dosage</th>
+                <th colspan="2">Testosterone Levels (Mean)</th>
+                <th colspan="2">(E2) Estradiol Levels (Mean)</th>
+                <th>Time Of Blood Drow</th>
+                <th>Timepoint Of Measurement</th>
+                <th>Hormone Suppressants</th>
+                <th colspan="2">Baseline Testosterone Levels <span class="sub-text"><em>(Not evaluated if Suppressants Were Used)</em></span></th>
+                <th>Baseline Gonadotrpins <span class="sub-text"><em>(Not evaluated if Suppressants Were Used)</em></span></th>
+                <th>Gonadotropins</th>
+                <th>Number Of Subjects Titrated to a Specific Dose</th>
+                
+                <!-- Titrated -->
+
+                <th><span class="highlight-word">Titrated</span> Dosage</th>
+                <th>Testosterone Levels After<span class="highlight-word"> Titration</span></th>
+                <th>Time of Blood Drow</th>
+                <th>Timepoint of Mesurement</th>
+                <th>Gonadotropins on<span class="highlight-word"> Titrated</span> Dose</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- Choi 2022 -->
+            <!-- Row 1 -->
+            <tr>
+                <th scope="row" rowspan="2" class="source-link">Choi 2022</th> 
+                <td rowspan="2">To fill</td>
+                <td>100 (For E2)</td>
+                <td>188</td>
+                <td rowspan="2">Testosterone Cypionate</td>
+                <td rowspan="2">(IM) Intramascular</td>
+                <td rowspan="2">Weekly</td>
+                <td rowspan="2">100mg</td>
+                <td colspan="2" style="padding:0">
+                    <table class="inner-table">
+                        <tr><td>536.4 ng/dL</td></tr>
+                    </table>
+                </td>
+                <td colspan="2">46.6 pg/mL (≥50pg/mL - 31% (31/100) of participants)</td>
+                <td rowspan="2">Trough</td>
+                <td rowspan="2">12th Week</td>
+                <td rowspan="2"><b>-</b></td>
+                <td colspan="2">313.6 ng/dL</td>
+                <td rowspan="2"><b>-</b></td>
+                <td rowspan="2"><b>-</b></td>
+                <td rowspan="2"><b>-</b></td>
+            </tr>
+            <!-- Row 2 -->
+            <tr>
+                <td>106 (For E2)</td>
+                <td>110</td>
+                <td colspan="2" style="padding:0">
+                    <table class="inner-table">
+                        <tr><td>552.8 ng/dL</td></tr>
+                    </table>
+                </td>
+                <td colspan="2">33.1 pg/mL (≥50pg/mL - 10.4% (11/106) of participants)</td>
+                <td colspan="2">246.6 ng/dL</td>
+            </tr>
+            <!-- Titrated Row 1 -->
+            <!-- Titrated Row 2 -->
+
+
+
+            <!-- Bhasin 2005 -->
+            <!-- Row 1 -->
+            <tr>
+                <th scope="row" rowspan="3" class="source-link">Bhasin 2005</th>
+                <td rowspan="3">To fill</td>
+                <td rowspan="3">On-Treatment levels are reported only for Older Men</td>
+                <td>13</td>
+                <td rowspan="3">Testosterone Enanthate</td>
+                <td rowspan="3">(IM) Intramuscular</td>
+                <td rowspan="3">Weekly</td>
+                <td>25mg</td>
+                <td colspan="2" style="padding:0">
+                    <table class="inner-table">
+                        <tr><td>176ng/dL (SD ± 34)</td></tr>
+                    </table>
+                </td>
+                <td colspan="2" rowspan="3"><b>-</b></td>
+                <td rowspan="3">Trough</td>
+                <td rowspan="3">16th Week</td>
+                <td rowspan="3">Leuprolide 7.5mg</td>
+                <td colspan="2" rowspan="3">352ng/dL (SD ± 111) - (GnRH Analog was Used)</td>
+                <td rowspan="3">GnRH Analog was Used</td>
+                <td rowspan="3">NS (Suppressed)</td>
+                <td rowspan="3"><b>-</b></td>
+            </tr>
+            <!-- Row 2 -->
+             <tr>
+                <td>12</td>
+                <td>50mg</td>
+                <td colspan="2" style="padding:0">
+                    <table class="inner-table">
+                        <tr><td>274ng/dL (SD ± 18)</td></tr>
+                    </table>
+                </td>
+             </tr>
+             <!-- Row 3 -->
+            <tr>
+                <td>11</td>
+                <td>125mg</td>
+                <td colspan="2" style="padding:0">
+                    <table class="inner-table">
+                        <tr><td>852ng/dL (SD ± 111)</td></tr>
+                    </table>
+                </td>
+            </tr>
+
+
+
+            <!-- Kaminetsky 2015 -->
+            <tr>
+                <th scope="row" rowspan="10">Kaminetsky 2015</th>
+                <td rowspan="10">To fill</td>
+                <td rowspan="5" colspan="2">15</td>
+                <td rowspan="10">Testosterone Enanthate</td>
+                <td rowspan="10">(SubQ) Subcutaneous</td>
+                <td rowspan="10">Weekly</td>
+                
+                <!-- 100 mg - Row 1 -->
+                <td rowspan="5">100mg</td>
+                <td colspan="2" style="padding:0;">
+                    <table class="inner-table">
+                        <tr><td>Cavg/week 895.5 ng/dL (SD ±279.8)</td></tr>
+                    </table>
+                </td>
+
+                <td colspan="2" rowspan="5">Mean Cavg/week 48.3pg/mL (SD ± 20.5)</td>
+                <td rowspan="3">Intensive Sampling</td>
+                <td rowspan="10">6th Week</td>
+                <td rowspan="10"><b>-</b></td>
+                
+                <td colspan="2" rowspan="5">201.5 ng/dL</td>
+                <td rowspan="10"><b>-</b></td>
+                <td rowspan="10"><b>-</b></td>
+                <td rowspan="10"><b>-</b></td>
+            </tr>
+            
+            <!-- 100 mg - Row 2 -->
+            <tr>
+                <td colspan="2">Cmin 568.3 ng/dL (SD ±196.4)</td>
+            </tr>
+            
+            <!-- 100 mg - Row 3 -->
+            <tr>
+                <td colspan="2">Cmax 1345.6 ng/dL (SD ±435.6)</td>
+            </tr>
+            
+            <!-- 100 mg - Row 4 -->
+            <tr>
+                <td colspan="2">±750 ng/dL (SD - Moderate)</td>
+                <td rowspan="1">Trough</td> 
+            </tr>
+            
+            <!-- 100 mg - Row 5 -->
+            <tr>
+                <td colspan="2">±875 ng/dL (SD - High)</td>
+                <td>Mid-Interval</td> 
+            </tr>
+            
+            <!-- 50 mg - Row 1 -->
+            <tr>
+                <td rowspan="5" colspan="2">14</td>
+                <td rowspan="5">50mg</td>
+                <td colspan="2">Cavg/week 422.4 ng/dL (SD ±123.9)</td>
+                <td rowspan="5">NS (Adult/Late Teen Transgender Men are unable to Suppress Endogenous Hormone Production on this dose)</td>
+                <td rowspan="5">NS (Presumably less than 25.6pg/mL If used with GnRHa)</td>
+                <td rowspan="3">Intensive-Sampling</td>
+                <td rowspan="5">214.64ng/dL</td>
+                <td rowspan="5">Endogenous Production <b>didn't</b> become Suppressed</td>
+            </tr>
+
+            
+            <!-- 50 mg - Row 2 -->
+            <tr>
+                <td colspan="2">Cmin 272.9 ng/dL (SD ±54.7)</td>
+            </tr>
+
+            <!-- 50 mg - Row 3 -->
+            <tr>
+                <td colspan="2">Cmax 622.4 ng/dL (SD ±129.5)</td>
+            </tr>
+
+            <!-- 50 mg - Row 4 -->
+            <tr>
+                <td colspan="2">±340 ng/dL (SD - Moderate)</td>
+                <td>Trough</td>
+            </tr>
+
+            <!-- 50 mg - Row 5 -->
+            <tr>
+                <td colspan="2">±430 ng/dL (SD - High)</td>
+                <td>Mid-Interval</td>
+            </tr>
+
+
+
+            <!-- Cooper 1998 -->
+             <tr>
+                <th scope="row" >Cooper 1998</th>
+                <td>To fill</td>
+                <td colspan="2">10</td>
+                <td>Testosterone Cypionate</td>
+                <td>(IM) Intramuscular</td>
+                <td>Weekly</td>
+                <td>100mg</td>
+                <td colspan="2">680ng/dL (SD ± 30)</td>
+                <td colspan="2"><b>-</b></td>
+                <td>Trough</td>
+                <td>15th Week</td>
+                <td><b>-</b></td>
+                <td colspan="2">656ng/dL (SD ± 45)</td>
+                <td><b>-</b></td>
+                <td><b>-</b></td>
+                <td><b>-</b></td>
+            </tr>
+            
+
+
+            <!-- Bhasin 2001 -->
+            <!-- Row 1 -->
+            <tr>
+                <th scope="row" rowspan="3">Bhasin 2001</th>
+                <td rowspan="3">Tp fill</td>
+                <td colspan="2">12</td>
+                <td rowspan="3">Testosterone Enanthate</td>
+                <td rowspan="3">(IM) Intramascular</td>
+                <td rowspan="3">Weekly</td>
+                <td rowspan="1">25mg</td>
+                <td colspan="2">253ng/dL (SD ± 66)</td>
+                <td rowspan="3" colspan="2"><b>-</b></td>
+                <td rowspan="3">Trough</td>
+                <td rowspan="3">16th Week</td>
+                <td rowspan="3">Leuprolide 7.5mg</td>
+                <td>593ng/dL (SD ± 161)</td>
+                <td rowspan="3">GnRH Analog was Used</td>
+                <td rowspan="3">NS (Suppressed)</td>
+                <td rowspan="3"><b>-</b></td>
+                <td rowspan="3"><b>-</b></td>
+            </tr>
+
+            <!-- Row 2 -->
+            <tr>
+                <td colspan="2">8</td>
+                <td>50mg</td>
+                <td colspan="2">306ng/dL (SD ± 58)</td>
+                <td>566ng/dL (SD ±  220)</td>
+            </tr>
+
+            <!-- Row 3 -->
+             <tr>
+                <td colspan="2">11</td>
+                <td>125mg</td>
+                <td colspan="2">570ng/dL (SD ± 75)</td>
+                <td>553ng/dL (SD ± 182)</td>
+             </tr>
+
+
+
+
+
+
+
+
+
+            
+            
+            
+
+            
+        </tbody>
+
+
+
+        </table>
+    </div>
+
+</body>
+</html>
